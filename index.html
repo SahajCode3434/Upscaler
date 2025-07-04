@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hikari AI - Upscaler</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+    .bg-scanlines {
+      background-image: repeating-linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    }
+  </style>
+</head>
+<body class="bg-black bg-scanlines min-h-screen flex flex-col items-center px-4 py-10">
+
+  <!-- Header -->
+  <h1 class="text-4xl font-bold text-yellow-400 mb-2">Hikari AI</h1>
+  <p class="text-gray-400 text-sm mb-8">Sharpen Reality. Amplify Light.</p>
+
+  <!-- Upload Container -->
+  <div class="w-full max-w-md p-4 bg-gray-900 border border-gray-700 rounded-lg shadow">
+    <input type="file" id="imageUpload" accept="image/*" class="mb-4 block w-full text-white" />
+    <button id="submitBtn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded">
+      Upscale Image
+    </button>
+    <div id="loading" class="hidden mt-4 text-center">
+      <div class="animate-spin h-10 w-10 border-4 border-yellow-500 border-t-transparent rounded-full mx-auto"></div>
+      <p class="text-gray-400 text-sm mt-2">Upscaling...</p>
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <div id="previewContainer" class="mt-6 hidden">
+    <h3 class="text-center text-lg text-gray-300 mb-2">Preview</h3>
+    <img id="previewImage" class="max-w-full border border-gray-600 rounded-lg" />
+  </div>
+
+  <!-- Result -->
+  <div id="resultContainer" class="mt-6 hidden">
+    <h3 class="text-center text-lg text-gray-300 mb-2">Upscaled Result</h3>
+    <img id="resultImage" class="max-w-full border border-yellow-500 rounded-lg" />
+    <button id="downloadBtn" class="mt-4 bg-yellow-600 hover:bg-yellow-700 text-black px-4 py-2 rounded">
+      Download Image
+    </button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="chimeSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_4595e7b46f.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
