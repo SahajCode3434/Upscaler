@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hikari AI - Upscaler</title>
+  <link rel="icon" href="/favicon.ico" />
+  <meta property="og:title" content="Hikari AI - Upscaler" />
+  <meta property="og:image" content="/og.jpg" />
+  <meta property="og:description" content="Sharpen Reality. Amplify Light." />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -22,16 +26,19 @@
     }
   </style>
 </head>
-<body class="bg-black bg-scanlines min-h-screen flex flex-col items-center px-4 py-10">
+<body class="min-h-screen flex flex-col items-center px-4 py-10 bg-black bg-scanlines">
+
+  <!-- Logo -->
+  <img src="/logo.svg" alt="Hikari AI Logo" class="w-16 h-16 mb-4" />
 
   <!-- Header -->
   <h1 class="text-4xl font-bold text-yellow-400 mb-2">Hikari AI</h1>
-  <p class="text-gray-400 text-sm mb-8">Sharpen Reality. Amplify Light.</p>
+  <p class="text-gray-400 text-sm mb-6">Sharpen Reality. Amplify Light.</p>
 
-  <!-- Upload Container -->
+  <!-- Upload Card -->
   <div class="w-full max-w-md p-4 bg-gray-900 border border-gray-700 rounded-lg shadow">
     <input type="file" id="imageUpload" accept="image/*" class="mb-4 block w-full text-white" />
-    <button id="submitBtn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded">
+    <button id="submitBtn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded transition">
       Upscale Image
     </button>
     <div id="loading" class="hidden mt-4 text-center">
@@ -50,10 +57,15 @@
   <div id="resultContainer" class="mt-6 hidden">
     <h3 class="text-center text-lg text-gray-300 mb-2">Upscaled Result</h3>
     <img id="resultImage" class="max-w-full border border-yellow-500 rounded-lg" />
-    <button id="downloadBtn" class="mt-4 bg-yellow-600 hover:bg-yellow-700 text-black px-4 py-2 rounded">
+    <button id="downloadBtn" class="mt-4 bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded text-black">
       Download Image
     </button>
   </div>
+
+  <!-- Footer -->
+  <footer class="text-sm text-gray-500 mt-10 mb-4 text-center">
+    All rights reserved © Hikari AI 2025
+  </footer>
 
   <!-- Audio -->
   <audio id="chimeSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_4595e7b46f.mp3"></audio>
