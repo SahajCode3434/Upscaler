@@ -79,7 +79,7 @@ export default function HikariAIPage() {
       {/* Header */}
       <div className="relative z-10 flex flex-col items-center">
         <img
-          src="/hakari-logo.png"
+          src="/Hikari-logo.png"
           alt="Hikari AI"
           className="w-14 h-14 mb-3 hover:drop-shadow-[0_0_10px_gold] transition"
         />
