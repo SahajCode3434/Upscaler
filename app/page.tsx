@@ -44,7 +44,6 @@ export default function HikariAIPage() {
       const upscaledURL = URL.createObjectURL(blob);
       setImageURL(upscaledURL);
 
-      // Play success chime
       if (audioRef.current) {
         audioRef.current.currentTime = 0;
         audioRef.current.play();
@@ -79,7 +78,11 @@ export default function HikariAIPage() {
 
       {/* Header */}
       <div className="relative z-10 flex flex-col items-center">
-        <img src="/logo.svg" alt="Hikari AI" className="w-14 h-14 mb-3" />
+        <img
+          src="/hakari-logo.png"
+          alt="Hikari AI"
+          className="w-14 h-14 mb-3 hover:drop-shadow-[0_0_10px_gold] transition"
+        />
         <h1 className="text-4xl font-bold text-yellow-400 mb-1">Hikari AI</h1>
         <p className="text-sm text-gray-400 mb-8">Sharpen Reality. Amplify Light.</p>
       </div>
